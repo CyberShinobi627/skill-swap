@@ -1,0 +1,95 @@
+body {
+      background-color: #3e2723;
+      color: #ffcc80;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #4e342e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-container img {
+      width: 100px;
+      height: auto;
+    }
+
+    .brand-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffcc80;
+      margin: 0;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #ffe0b2;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffb74d;
+    }
+
+    .hero-section {
+      text-align: center;
+      margin: 100px auto;
+      padding: 20px;
+    }
+
+    .mission {
+      font-size: 2rem;
+      color: #fff3e0;
+      max-width: 800px;
+      margin: 0 auto 10px;
+    }
+
+    .subtext {
+      font-size: 1.2rem;
+      color: #ffe0b2;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background-color: #ff9800;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .cta-btn:hover {
+      background-color: #fb8c00;
+    }
+
+    footer {
+      background-color: #4e342e;
+      color: #ffe0b2;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }

@@ -1,0 +1,225 @@
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #3e2723;
+  color: #ffe0b2;
+}
+
+h1, h2, h3 {
+  color: #ffcc80;
+  margin: 10px 0;
+  text-align: center;
+}
+
+p, li {
+  font-size: 16px;
+}
+
+a {
+  color: #ff9800;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== INDEX PAGE ===== */
+.index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #5d4037, #3e2723);
+  min-height: 100vh;
+}
+
+.index-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.index-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.index-mission {
+  font-size: 20px;
+  max-width: 600px;
+  background: linear-gradient(to right, #ffa726, #ffb74d);
+  color: #3e2723;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ff9800;
+  margin-top: 20px;
+}
+
+/* ===== FORM PAGES (Login / Register) ===== */
+.form-container {
+  max-width: 450px;
+  margin: 60px auto;
+  background-color: #4e342e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.form-container h2 {
+  color: #ffcc80;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+  color: #ffe0b2;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #8d6e63;
+  background: #fff8e1;
+  color: #3e2723;
+  margin-bottom: 15px;
+}
+
+button {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 100%;
+}
+
+button:hover {
+  background: #e65100;
+}
+
+/* Optional messages */
+.success {
+  color: #00e676;
+}
+.error {
+  color: #ff5252;
+}
+body.ABOUT-PAGE .logo{
+  width: 100px;
+  height : auto;
+  max-width: 80%;
+}
+body.ABOUT-PAGE .logo{
+  display: block;
+  margin: 20px auto;
+}
+
+/* ===== DASHBOARD HEADER ===== */
+header {
+  background: #4e342e;
+  color: #ffe0b2;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  padding: 5px 12px;
+  background: #a74b00;
+  border-radius: 5px;
+}
+
+/* ===== DASHBOARD SIDEBAR ===== */
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 240px;
+  background: #6d4c41;
+  height: 100vh;
+  padding-top: 20px;
+  position: fixed;
+  left: -240px;
+  top: 0;
+  transition: left 0.3s;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 14px 20px;
+  color: #ffe0b2;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid #a1887f;
+}
+
+.sidebar a:hover {
+  background: #8d6e63;
+}
+
+/* ===== DASHBOARD MAIN CONTENT ===== */
+main {
+  margin-left: 260px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+section {
+  background: #4e342e;
+  margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #222;
+}
+
+.topics button {
+  margin: 8px;
+  padding: 10px 16px;
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.card {
+  background: #6d4c41;
+  padding: 10px 16px;
+  border-radius: 10px;
+  margin: 10px;
+  color: #ffe0b2;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer {
+  background: #3e2723;
+  color: white;
+  text-align: center;
+  padding: 12px;
+}

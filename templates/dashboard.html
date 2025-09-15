@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SkillSwap Dashboard</title>
+  <link rel="stylesheet" href="/dashboard.css">
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <img src="/skill swap.png" alt="SkillSwap Logo" class="logo">
+    <h1>SkillSwap Dashboard</h1>
+    <div class="menu-icon" onclick="toggleSidebar()">&#9776;</div>
+  </header>
+
+  <div class="container">
+    <nav id="sidebar" class="sidebar">
+      <a href="#home">🏠 Dashboard Home</a>
+      <a href="#ai">🤖 AI Board</a>
+      <a href="#community">👥 Community</a>
+      <a href="#skill">📤 Skill Sharing</a>
+      <a href="#mentor">🎓 Mentor Booking</a>
+      <a href="#premium">⭐ Premium Content</a>
+      <a href="#cert">📜 Certifications</a>
+      <a href="#edit">📝 Edit Profile</a>
+    </nav>
+
+    <main>
+      <section id="home">
+        <h2>👋 Welcome, [username]</h2>
+        <p>What would you like to explore today?</p>
+        <input type="text" placeholder="🔍 Search skills, topics, or mentors..." />
+        <div class="topics">
+          <button>Explore Python Basics</button>
+          <button>Explore Excel for Business</button>
+          <button>Explore Finance 101</button>
+          <button>Explore AI in Commerce</button>
+        </div>
+      </section>
+
+      <section id="ai">
+        <h2>🤖 AI Board</h2>
+        <textarea placeholder="Ask your question..."></textarea>
+        <button>Ask AI</button>
+        <p class="note">🧠 (AI response placeholder — will be powered in production.)</p>
+      </section>
+
+      <section id="community">
+        <h2>👥 SkillSwap Community</h2>
+        <div class="grid">
+          <div class="card">👩‍🎓 Anjali - Commerce</div>
+          <div class="card">🧑‍💻 Rajat - Python</div>
+          <div class="card">👨‍🏫 Sagar - AI Mentor</div>
+          <div class="card">👩‍🏫 Ritika - Finance Mentor</div>
+          <div class="card">🧒 Ayaan - Class 12</div>
+          <div class="card">👧 Sneha - B.Com</div>
+        </div>
+      </section>
+
+      <section id="skill">
+        <h2>📤 Skill Sharing</h2>
+        <input type="text" placeholder="Enter your skill..." />
+        <textarea placeholder="Describe your skill..."></textarea>
+        <button>Share</button>
+        <p><strong>📢 Recently Shared:</strong></p>
+        <ul>
+          <li>Anjali: Accounting Basics</li>
+          <li>Rajat: Python Loops</li>
+          <li>Sneha: Canva Graphics</li>
+        </ul>
+      </section>
+
+      <section id="mentor">
+        <h2>🎓 Book a Mentor</h2>
+        <input type="text" placeholder="Search (e.g., Python, Finance)..." />
+        <div class="mentor">
+          <div class="card">👩‍🏫 Riya Sharma – Python, AI (4.9⭐) – ₹299 <button>Book</button></div>
+          <div class="card">👨‍🏫 Amit Verma – Excel, Analytics (4.7⭐) – ₹199 <button>Book</button></div>
+          <div class="card">👨‍🏫 Rahul Sen – Finance (4.6⭐) – ₹249 <button>Book</button></div>
+        </div>
+      </section>
+
+      <section id="premium">
+        <h2>⭐ Premium Content</h2>
+        <p class="locked">🔒 Premium access required</p>
+        <ul>
+          <li>Mock Interviews</li>
+          <li>Downloadable E-books</li>
+          <li>Live Mentor Sessions</li>
+        </ul>
+      </section>
+
+      <section id="cert">
+        <h2>📜 Your Certifications</h2>
+        <ul>
+          <li>✔️ Python Basics</li>
+          <li>✔️ Financial Literacy Beginner</li>
+          <li>❌ Excel Ninja</li>
+        </ul>
+      </section>
+
+      <section id="edit">
+        <h2>📝 Edit Profile</h2>
+        <input type="text" placeholder="Your Name">
+        <input type="text" placeholder="Your Class or Year">
+        <select>
+          <option>Technical</option>
+          <option>Commerce</option>
+        </select>
+        <input type="text" placeholder="Your Institution">
+        <textarea placeholder="Short Bio"></textarea>
+        <input type="text" placeholder="Contact Email">
+        <button>Save Profile</button>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 SkillSwap | Contact: support@skillswap.com</p>
+  </footer>
+
+</body>
+</html>

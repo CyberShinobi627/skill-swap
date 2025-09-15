@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <link rel="stylesheet" href="/verify.css">
+</head>
+<body>
+    <section>
+        <!-- <h1>OTP</h1> -->
+        <form action="/show_msg">
+            <label>Enter verification code:</label>
+            <input type="text" name="code" required><br><br>
+            <button id="send" type="submit">submit</button>
+        </form><br>
+        <p id="msg" style="color: greenyellow;"></p>
+        <p>Didn't get any code ? <button type="submit" onclick="demo()">resend</button> code</p>
+        <!-- <form action="/resend" method="post">
+            <input type="hidden" value="{{resend_mail}}" name="mail">
+        </form> -->
+    </section>
+    <!-- <a href="/check_mail">resend</a>OTP -->
+     <script>
+        let msg = document.querySelector("#msg");
+        const jsonData = {"sendmode": "resend"};
+        
+        function demo(){
+            msg.innerText = "verification code successfully resend"
+            fetch("/resend", {
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/json; charset=utf-8"
+                },
+                "body": JSON.stringify(jsonData)
+            })
+            .then(response => response.json())
+            // .then(data => msg.innerText = data["message"])
+            // .then(data => console.log("success:", data["message"]))
+        }
+    </script>
+</body>
+</html>

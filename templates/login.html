@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - SkillSwap</title>
+  <link rel="stylesheet" href="/login.css" />
+  <style>
+    body {
+      /* background-color: #fff3e0; */
+      font-family: 'Segoe UI', sans-serif;
+      color: #ffe0b2;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #6d4c41;
+      padding: 10px 30px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-container img {
+      width: 45px;
+      height: 45px;
+    }
+
+    .brand-title {
+      color: #ffcc80;
+      font-size: 1.8rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #ffe0b2;
+      font-weight: bold;
+    }
+
+    .login-section {
+      padding: 40px;
+      max-width: 500px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+
+    .login-section h2 {
+      text-align: center;
+      color: #ffcc80;
+      margin-bottom: 20px;
+    }
+
+    .login-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .login-buttons button {
+      padding: 10px 20px;
+      background: #ff9800;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      color: #ffe0b2;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .cta-btn {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      background: #fb8c00;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cta-btn:hover {
+      background-color: #f57c00;
+    }
+  </style>
+
+  <script>
+    function showLogin(role) {
+      document.getElementById("studentLogin").style.display = role === "student" ? "block" : "none";
+      document.getElementById("mentorLogin").style.display = role === "mentor" ? "block" : "none";
+      document.getElementById("adminLogin").style.display = role === "admin" ? "block" : "none";
+    }
+  </script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo-container">
+      <img src="/skill swap.png" alt="Logo" />
+      <h1 class="brand-title">Welcome to SkillSwap</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="dashboard.html">Go to Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <section class="login-section">
+    <h2>Login to Your Account</h2>
+
+    <div class="login-buttons">
+      <button onclick="showLogin('student')">Student</button>
+      <button onclick="showLogin('mentor')">Mentor</button>
+      <button onclick="showLogin('admin')">Admin</button>
+    </div>
+
+    <!-- Student Login -->
+    <form id="studentLogin" style="display:none">
+      <label>Username:</label>
+      <input type="text" required>
+      <label>Password:</label>
+      <input type="password" required>
+      <input type="submit" value="Login" class="cta-btn">
+    </form>
+
+    <!-- Mentor Login -->
+    <form id="mentorLogin" style="display:none">
+      <label>Email or Username:</label>
+      <input type="text" required>
+      <label>Password:</label>
+      <input type="password" required>
+      <input type="submit" value="Login" class="cta-btn">
+    </form>
+
+    <!-- Admin Login -->
+    <form id="adminLogin" style="display:none">
+      <label>Admin ID:</label>
+      <input type="text" required>
+      <label>Password:</label>
+      <input type="password" required>
+      <input type="submit" value="Login" class="cta-btn">
+    </form>
+  </section>
+</body>
+</html>
